@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\LocaleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,14 +15,13 @@ use App\Http\Controllers\SiteController;
 */
 
 Route::get('/', function () {
-    return view('index');
-})->name('home');
+    return view('app');
+})->name('app');
 
 
 Route::get('/locale/{locale}', [LocaleController::class, 'setLocale'])->name('setLocale');
-Route::get('/', [SiteController::class, 'index'])->name('home');
+Route::get('/', [SiteController::class, 'app'])->name('app');
 Route::get('/about', [SiteController::class, 'about'])->name('about');
 Route::get('/portfolio', [SiteController::class, 'portfolio'])->name('portfolio');
 Route::get('/services', [SiteController::class, 'services'])->name('services');
 Route::get('/contact', [SiteController::class, 'contact'])->name('contact');
-

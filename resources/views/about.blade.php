@@ -13,56 +13,69 @@
 
   <body>
     <!--********************************* Start WRAPPER Section ************************************ -->
-    <div class="wrapper">
+    <div class="wrapper"> 
       <!--====================================== Start NAVBAR section ======================================-->
       <nav class="site-nav">
         <!-- Site LOGO -->
         <div class="site-nav__container">
           <div class="site-nav-logo">
-            <a href="{{ route('home') }}" class="site-nav-logo__item">
+            <a href="{{ route('app') }}" class="site-nav-logo__item">
               <img src="assets/icons/site-logo.svg" class="site-logo site-nav__logo-img">
             </a>
           </div>
           <!-- SITENAV menu -->
           <div class="site-nav-menu">
+            
             <ul class="site-nav-menu__list">
-              <li class="site-nav__list">
-                <a href="{{ route('home') }}" class="site-nav__link {{ request()->routeIs('home') ? 'active' : '' }}">Bosh sahifa</a>
-              </li>
-              <li class="site-nav__list">
-                <a href="{{ route('about') }}" class="site-nav__link {{ request()->routeIs('about') ? 'active' : '' }}">Biz haqimizda</a>
-              </li>
-              <li class="site-nav__list">
-                <a href="{{ route('portfolio') }}" class="site-nav__link {{ request()->routeIs('portfolio') ? 'active' : '' }}">Portfolio</a>
-              </li>
-              <li class="site-nav__list">
-                <a href="{{ route('services') }}" class="site-nav__link {{ request()->routeIs('services') ? 'active' : '' }}">Xizmatlar</a>
-              </li>
-              <li class="site-nav__list">
-                <a href="{{ route('contact') }}" class="site-nav__link {{ request()->routeIs('contact') ? 'active' : '' }}">Bog’lanish</a>
-              </li>
+                <li class="site-nav__list">
+                    <a href="{{ route('app') }}" class="site-nav__link {{ request()->routeIs('home') ? 'active' : '' }}">
+                        @lang('menu.home')
+                    </a>
+                </li>
+                <li class="site-nav__list">
+                    <a href="{{ route('about') }}" class="site-nav__link {{ request()->routeIs('about') ? 'active' : '' }}">
+                        @lang('menu.about')
+                    </a>
+                </li>
+                <li class="site-nav__list">
+                    <a href="{{ route('portfolio') }}" class="site-nav__link {{ request()->routeIs('portfolio') ? 'active' : '' }}">
+                        @lang('menu.portfolio')
+                    </a>
+                </li>
+                <li class="site-nav__list">
+                    <a href="{{ route('services') }}" class="site-nav__link {{ request()->routeIs('services') ? 'active' : '' }}">
+                        @lang('menu.services')
+                    </a>
+                </li>
+                <li class="site-nav__list">
+                    <a href="{{ route('contact') }}" class="site-nav__link {{ request()->routeIs('contact') ? 'active' : '' }}">
+                        @lang('menu.contact')
+                    </a>
+                </li>
             </ul>
-          </div>
-          <!-- SITENAV Btn -->
-          <div class="site-nav-btns">
+            
+        </div>
+        <!-- SITENAV Btn -->
+        <div class="site-nav-btns">
             <div class="site-nav__toggle">
-              <select class="site-nav-btns__toggle">
-                <option value="uz">Uz</option>
-                <option value="en">En</option>
-                <option value="en">Ru</option>
-              </select>
+                <select class="site-nav-btns__toggle" onchange="changeLang(this)">
+                    <option value="uz" @selected(session('locale') == 'uz')>Uz</option>
+                    <option value="en" @selected(session('locale') == 'en')>En</option>
+                    <option value="ru" @selected(session('locale') == 'ru')>Ru</option>
+                </select>
             </div>
             <div class="site-nav-btns__wrapper">
-              <button class="site-nav-btns__btn open__modal-btn">
-                Gaplashamizmi?
-              </button>
+                <button class="site-nav-btns__btn open__modal-btn">
+                    @lang('menu.chat')
+                </button>
+                
             </div>
             <button class="site-nav__menu-icon">
-              <img src="assets/icons/menu-icon.svg" alt="Menu__icon" />
+                <img src="assets/icons/menu-icon.svg" alt="Menu__icon" />
             </button>
-          </div>
         </div>
-      </nav>
+    </div>
+</nav>
       <!-- /NAVBAR -->
       <!--==================================== Start HEADER =========================================== -->
       <header class="header">
@@ -362,116 +375,11 @@
       </main>
 
       <!--============================================= Start MODAL section =============================================-->
-      <div class="modal hide">
-        <div class="modal__dialog">
-          <div class="modal__content">
-            <div class="modal__wrapper">
-              <form class="modal__form" action="#">
-                <button class="modal__close">
-                  <i class="fa-solid fa-xmark" style="color: #ffffff"></i>
-                </button>
-                <div class="modal__info">
-                  <h3 class="modal__title">Gaplashamizmi?</h3>
-                  <p class="modal__text">
-                    Loyihangizga yangicha yechim berishni xoxlasangiz quyidagi
-                    maydonlarni to‘ldiring, o’zimiz siz bilan bog‘lanamiz
-                  </p>
-                </div>
-                <div class="modal__row">
-                  <div class="modal__name input__wrapper">
-                    <label for="modal__name" class="modal__label input__label"
-                      >Ism</label
-                    >
-                    <input
-                      type="text"
-                      class="contact__input modal__name-item"
-                      id="modal__name"
-                    />
-                  </div>
-                  <div class="modal__email input__wrapper">
-                    <label for="modal__email" class="modal__label input__label"
-                      >Telefon raqam</label
-                    >
-                    <input
-                      type="email"
-                      class="contact__input modal__email-item"
-                      id="modal__email"
-                    />
-                  </div>
-                </div>
-                <div class="modal__message input__wrapper">
-                  <label for="modal__message" class="modal__label input__label"
-                    >Xabar qoldiring</label
-                  >
-                  <textarea
-                    rows="6"
-                    class="contact__input modal__message-item"
-                    id="modal__message"
-                  ></textarea>
-                </div>
-                <button type="submit" class="modal__btn main-btn">
-                  Yuborish
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+      @include('layouts.modal')
       <!-- /MODAL -->
 
       <!--============================================= Start FOOTER section =============================================-->
-      <footer class="footer">
-        <div class="container">
-          <div class="footer__link">
-            <div class="footer__logo site-logo">
-              <a href="index.html" class="logo__item"><img src="assets/icons/site-logo.svg" class="site-logo footer__logo-img"></a>
-            </div>
-
-            <!--============================================= FOOTER__MEDIA =============================================-->
-            <div class="footer__media">
-              <a href="#"
-                ><i class="fa-brands fa-facebook-f" style="color: #ffffff"></i
-              ></a>
-              <a href="#"
-                ><i class="fa-brands fa-instagram" style="color: #ffffff"></i
-              ></a>
-              <a href="#"
-                ><i class="fa-brands fa-twitter" style="color: #ffffff"></i
-              ></a>
-            </div>
-            <!-- /FOOTER__MEDIA -->
-
-            <!--============================================= Start FOOTER__MENU =============================================-->
-            <ul class="footer__menu">
-              <li class="footer__menu-list">
-                <a href="index.html" class="footer__menu-link">Bosh sahifa</a>
-              </li>
-              <li class="footer__menu-list">
-                <a href="about.html" class="footer__menu-link">Biz haqimizda</a>
-              </li>
-              <li class="footer__menu-list">
-                <a href="portfolio.html" class="footer__menu-link">Portfolio</a>
-              </li>
-              <li class="footer__menu-list">
-                <a href="services.html" class="footer__menu-link">Xizmatlar</a>
-              </li>
-              <li class="footer__menu-list">
-                <a href="contact.html" class="footer__menu-link">Bog’lanish</a>
-              </li>
-            </ul>
-            <!-- /FOOTER__MENU -->
-          </div>
-          <div class="footer__bottom">
-            <p class="footer__desc">
-              &copy; Copyright 2023, All Rights Reserved
-            </p>
-            <div class="footer__bottom-link">
-              <a href="conditions.html">Foydalanish shartlari</a>
-              <a href="privacy.html">Maxfiylik siyosati</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+     @include('layouts.footer')
       <!-- /FOOTER -->
     </div>
     <script src="assets/js/main.js"></script>

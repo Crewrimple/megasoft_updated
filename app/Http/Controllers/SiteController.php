@@ -5,9 +5,9 @@ use Illuminate\Http\Request;
 
 class SiteController extends Controller
 {
-    public function index()
+    public function app()
     {
-        return view('index');
+        return view('layouts.app');
     }
 
     public function about()
