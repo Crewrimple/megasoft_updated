@@ -1,7 +1,7 @@
 <div class="modal hide">
     <div class="modal__dialog">
-        <div class="modal__content">
-            <div class="modal__wrapper">
+      <div class="modal__content">
+        <div class="modal__wrapper">
                 <form class="modal__form" action="#">
                     <button class="modal__close">
                         <i class="fa-solid fa-xmark" style="color: #ffffff"></i>
@@ -29,4 +29,4 @@
             </div>
         </div>
     </div>
-</div>
+</div>  

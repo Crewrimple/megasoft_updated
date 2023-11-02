@@ -313,7 +313,7 @@
           class="details__icons fa-solid fa-location-dot"
           style="color: #ffffff"
         ></i
-        >Farrux Dusniyazov</span
+        >Uzbekistan</span
       >
     </div>
     <div class="contact__form">

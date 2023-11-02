@@ -1382,14 +1382,15 @@ body {
   position: absolute;
   top: 8px;
   right: 14px;
-  font-size: 30px;
+  font-size: 30px; /* Эта строка дублируется */
   color: #000;
   opacity: 0.5;
-  font-size: 24px;
+  font-size: 24px; /* Здесь установлен другой размер шрифта */
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
+
 .modal__info {
   margin-bottom: 48px;
 }
@@ -1419,6 +1420,14 @@ body {
 .modal__btn {
   width: 100%;
 }
+.modal.show {
+  display: block;
+}
+
+.modal.hide {
+  display: none;
+}
+
 .modal__name, .modal__email, .modal__message {
   margin-bottom: 15px;
 }

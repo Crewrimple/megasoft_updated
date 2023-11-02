@@ -65,7 +65,7 @@
   .service-page .services-wrapper .services-menu__item {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     gap: 20px;
     padding: 12px 0;
     cursor: pointer;

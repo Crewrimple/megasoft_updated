@@ -348,7 +348,7 @@
                   class="details__icons fa-solid fa-location-dot"
                   style="color: #ffffff"
                 ></i
-                >Farrux Dusniyazov</span
+                >Uzbekistan</span
               >
             </div>
             <div class="contact__form">
@@ -403,7 +403,7 @@
       <!-- /MAIN -->
 
       <!--============================================= Start MODAL section =============================================-->
-    
+    @include('layouts.modal')
       <!-- /MODAL -->
 
       <!--============================================= Start FOOTER section =============================================-->
@@ -417,5 +417,6 @@
           window.location.href = urls;
       }
   </script>
+   <script src="assets/js/main.js"></script>
   </body>
 </html>

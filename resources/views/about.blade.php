@@ -70,7 +70,7 @@
                     @lang('menu.chat')
                 </button>
                 
-            </div>
+            </div>  
             <button class="site-nav__menu-icon">
                 <img src="assets/icons/menu-icon.svg" alt="Menu__icon" />
             </button>
@@ -217,7 +217,7 @@
                   class="details__icons fa-solid fa-location-dot"
                   style="color: #ffffff"
                 ></i
-                >Farrux Dusniyazov</span
+                >Uzbekistan</span
               >
             </div>
             <div class="contact__form">
@@ -271,9 +271,9 @@
       </main>
 
       <!--============================================= Start MODAL section =============================================-->
-      @include('layouts.modal')
+      
       <!-- /MODAL -->
-
+          @include('layouts.modal')
       <!--============================================= Start FOOTER section =============================================-->
      @include('layouts.footer')
       <!-- /FOOTER -->
@@ -286,6 +286,7 @@
           window.location.href = urls;
       }
   </script>
+   <script src="assets/js/main.js"></script>
     </body>
     
   </body>

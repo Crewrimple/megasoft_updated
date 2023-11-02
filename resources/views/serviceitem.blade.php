@@ -224,7 +224,7 @@
                     class="details__icons fa-solid fa-location-dot"
                     style="color: #ffffff"
                   ></i
-                  >Farrux Dusniyazov</span
+                  >Uzbekistan</span
                 >
               </div>
               <div class="contact__form">
@@ -324,6 +324,7 @@
         window.location.href = urls;
     }
 </script>
+<script src="assets/js/main.js"></script>
 </body>
 
 </html>
