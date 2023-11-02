@@ -7,11 +7,10 @@ class LocaleController extends Controller
 {
     public function setLocale($locale)
     {
-        if (in_array($locale, ['en', 'ru', 'uz'])) {
-            app()->setLocale($locale);
-            session()->put('locale', $locale);
+        if (in_array($locale, ['uz', 'en', 'ru'])) {
+            session(['locale' => $locale]);
         }
-
-        return redirect()->back();
+        return back();
     }
+    
 }

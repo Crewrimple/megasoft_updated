@@ -1,0 +1,176 @@
+.service-item-page {
+    padding: 85px 0 70px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .service-item-page__title {
+    color: #fff;
+    /* Header-2 Bold */
+    font-family: Outfit;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 80px; /* 133.333% */
+  }
+  @media (max-width: 1180px) {
+    .service-item-page__title {
+      font-size: calc(
+        30px + 30 *
+          ((100vw - 320px) / 860)
+      );
+    }
+  }
+  .service-item-page__links {
+    display: flex;
+    align-items: center;
+    justify-content: unset;
+    gap: 10px;
+  }
+  @media (max-width: 900px) {
+    .service-item-page {
+      padding: 55px 0;
+    }
+  }
+  .service-item-page__icon {
+    font-size: 14px;
+  }
+  
+  .service-page {
+    margin-top: 128px;
+  }
+  @media (max-width: 900px) {
+    .service-page {
+      margin-top: 60px;
+    }
+  }
+  .service-page .services-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .service-page .services-wrapper .services-menu {
+    position: relative;
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+  }
+  .service-page .services-wrapper .services-menu__items {
+    position: sticky;
+    top: 90px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(169, 174, 177, 0.2);
+    padding: 24px 20px;
+  }
+  .service-page .services-wrapper .services-menu__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 0;
+    cursor: pointer;
+  }
+  .service-page .services-wrapper .services-menu__item:not(:last-child) {
+    border-bottom: 1px solid rgba(169, 174, 177, 0.2);
+    margin-bottom: 8px;
+  }
+  .service-page .services-wrapper .services-menu .icon-container {
+    background-color: #232b2e;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .service-page .services-wrapper .service-item-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .service-page .services-wrapper .services-info {
+    max-width: 62%;
+  }
+  .service-page .services-wrapper .services-info-item:first-child {
+    margin-bottom: 75px;
+  }
+  .service-page .services-wrapper .service-item-title {
+    color: #fff;
+    font-family: "Outfit";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px; /* 130% */
+    margin-bottom: 2px;
+  }
+  .service-page .services-wrapper .service-item-desc {
+    color: #fff;
+    font-family: "Outfit";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px; /* 142.857% */
+  }
+  .service-page .services-wrapper .service-active {
+    color: #40abe1;
+  }
+  .service-page .services-wrapper .services-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .service-page .services-wrapper .service-info-img {
+    border-radius: 16px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .service-page .services-wrapper .services-info-title {
+    color: #fff;
+    font-family: "Outfit";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px; /* 113.333% */
+    margin-bottom: 20px;
+  }
+  .service-page .services-wrapper .services-info-text {
+    color: #a1a1a1;
+    font-family: "Outfit";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px; /* 162.5% */
+  }
+  @media (max-width: 870px) {
+    .service-page .services-wrapper {
+      display: flex;
+      align-items: unset;
+      justify-content: unset;
+      flex-direction: column-reverse;
+    }
+    .service-page .services-wrapper .services-menu {
+      width: 100%;
+      height: min-content !important;
+      margin-bottom: 30px;
+    }
+    .service-page .services-wrapper .services-menu__item {
+      justify-content: flex-start;
+    }
+    .service-page .services-wrapper .services-info {
+      max-width: 100%;
+    }
+  }
+  
+  .service-item-page__after {
+    width: 175px;
+    height: 146.321px;
+    position: absolute;
+    top: 65%;
+    left: 95%;
+  }
+  @media (max-width: 1410px) {
+    .service-item-page__after {
+      left: unset;
+      right: 0;
+      top: 80%;
+    }
+  }
+  @media (max-width: 762px) {
+    .service-item-page__after {
+      display: none;
+    }
+  }

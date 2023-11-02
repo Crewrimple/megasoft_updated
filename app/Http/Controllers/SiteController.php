@@ -29,4 +29,9 @@ class SiteController extends Controller
     {
         return view('contact');
     }
+    public function serviceitem()
+    {
+        
+        return view('serviceitem');
+    }
 }

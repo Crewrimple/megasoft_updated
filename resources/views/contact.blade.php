@@ -84,26 +84,22 @@
       <header class="header">
         <!--====================================== Start CONTACT-PAGE__BANNER section ======================================-->
         <div class="contact-page__banner page__banner-bg">
-          <div class="container">
-            <div class="contact-page">
-              <h1 class="contact-page__title">Bog'lanish</h1>
-              <div class="contact-page__links">
-                <a href="index.html" class="contact-page__home">Bosh sahifa</a>
-                <span class="contact-page__link-sign"
-                  ><i
-                    class="contact-page__icon fa-solid fa-chevron-right"
-                    style="color: #ffffff"
-                  ></i
-                ></span>
-                <a href="contact-page.html" class="contact-page__link"
-                  >Bog'lanish</a
-                >
-              </div>
+            <div class="container">
+                <div class="contact-page">
+                    <h1 class="contact-page__title">@lang('contact.title')</h1>
+                    <div class="contact-page__links">
+                        <a href="{{ route('app', app()->getLocale()) }}" class="contact-page__home">@lang('contact.home')</a>
+                        <span class="contact-page__link-sign">
+                            <i class="contact-page__icon fa-solid fa-chevron-right" style="color: #ffffff"></i>
+                        </span>
+                        <a href="{{ route('contact', app()->getLocale()) }}" class="contact-page__link">@lang('contact.contact')</a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
         <!-- /CONTACT__BANNER -->
-      </header>
+    </header>
+    
       <!-- /HEADER -->
 
       <!--=============================================== Start MAIN section ===============================================-->
@@ -112,90 +108,49 @@
 
         <div class="connection">
           <div class="container">
-            <div class="connection__wrapper">
-              <div class="connection__body">
-                <div class="connection__desc">
-                  <h2 class="connection__title main-title">Bog‘laning</h2>
-                  <p class="connection__text main-text">
-                    Quyidagi maydonlarni to‘ldirgan holda biz bilan
-                    bog‘lanishingiz mumkin, yoki pastda bizning manzil va
-                    telefon raqamimiz bor, bemalol bog‘lanishingiz mumkin
-                  </p>
-                </div>
-                <div class="connection__info">
-                  <h3 class="connection__info-title">Bizning ofis</h3>
-                  <div class="connection__img-wrapper">
-                    <img
-                      src="images/connection__img.png"
-                      alt="Img"
-                      class="connection__img"
-                    />
+              <div class="connection__wrapper">
+                  <div class="connection__body">
+                      <div class="connection__desc">
+                          <h2 class="connection__title main-title">@lang('contact.title')</h2>
+                          <p class="connection__text main-text">@lang('contact.text')</p>
+                      </div>
+                      <div class="connection__info">
+                          <h3 class="connection__info-title">@lang('contact.office_title')</h3>
+                          <div class="connection__img-wrapper">
+                              <img src="images/connection__img.png" alt="Img" class="connection__img" />
+                          </div>
+                          <h4 class="connection__location">@lang('contact.location')</h4>
+                          <span class="contact__details main-text">
+                              <i class="details__icons fa-solid fa-location-dot" style="color: #ffffff"></i>
+                              @lang('contact.address')
+                          </span>
+                          <span class="contact__details main-text">
+                              <i class="details__icons fa-solid fa-phone-volume" style="color: #ffffff"></i>
+                              @lang('contact.phone')
+                          </span>
+                      </div>
                   </div>
-                  <h4 class="connection__location">New York, USA</h4>
-                  <span class="contact__details main-text"
-                    ><i
-                      class="details__icons fa-solid fa-location-dot"
-                      style="color: #ffffff"
-                    ></i
-                    >3891 Ranchview Dr. Richardson, California 62639</span
-                  >
-                  <span class="contact__details main-text">
-                    <i
-                      class="details__icons fa-solid fa-phone-volume"
-                      style="color: #ffffff"
-                    ></i>
-                    (201) 555-0124</span
-                  >
-                </div>
+                  <div class="connection__form">
+                      <form action="#" class="contact__page-form">
+                          <label for="connection__name" class="connection__label">@lang('contact.name_label')</label>
+                          <input type="text" class="connection__input" id="connection__name" placeholder="Farrux Dusniyazov" />
+      
+                          <label for="connection__number" class="connection__label">@lang('contact.phone_label')</label>
+                          <input type="text" class="connection__input" id="connection__number" placeholder="+998(00) 000 00 00" />
+      
+                          <label for="connection__company" class="connection__label">@lang('contact.company_label')</label>
+                          <input type="text" class="connection__input" id="connection__company" placeholder="Megasoft" />
+      
+                          <label for="connection__message" class="connection__label">@lang('contact.message_label')</label>
+                          <textarea id="connection__message" class="connection__input connection__message" rows="7" placeholder="@lang('contact.message_placeholder')"></textarea>
+      
+                          <button type="submit" class="main-btn">@lang('contact.submit_button')</button>
+                      </form>
+                  </div>
               </div>
-              <div class="connection__form">
-                <form action="#" class="contact__page-form">
-                  <label for="connection__name" class="connection__label"
-                    >Ism familiya</label
-                  >
-                  <input
-                    type="text"
-                    class="connection__input"
-                    id="connection__name"
-                    placeholder="Abdullayev Abdulla"
-                  />
-
-                  <label for="connection__number" class="connection__label"
-                    >Telefon raqam</label
-                  >
-                  <input
-                    type="text"
-                    class="connection__input"
-                    id="connection__number"
-                    placeholder="+998(00) 000 00 00 "
-                  />
-
-                  <label for="connection__company" class="connection__label"
-                    >Kompaniya nomi</label
-                  >
-                  <input
-                    type="text"
-                    class="connection__input"
-                    id="connection__company"
-                    placeholder="Megasoft"
-                  />
-
-                  <label for="connection__message" class="connection__label"
-                    >Xabar</label
-                  >
-                  <textarea
-                    id="connection__message"
-                    class="connection__input connection__message"
-                    rows="7"
-                    placeholder="Biror xabar yozing"
-                  ></textarea>
-
-                  <button type="submit" class="main-btn">Yuborish</button>
-                </form>
-              </div>
-            </div>
           </div>
-        </div>
+      </div>
+      
 
         <!-- /CONNECTION -->
       </main>
@@ -210,6 +165,11 @@
       <!-- /FOOTER -->
     </div>
     <!-- /WRAPPER -->
-    <script src="assets/js/main.js"></script>
+    <script>
+      function changeLang(lang) {
+          let urls = '/locale/' + lang.value;
+          window.location.href = urls;
+      }
+  </script>
   </body>
 </html>

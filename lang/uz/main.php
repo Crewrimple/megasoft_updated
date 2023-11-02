@@ -43,7 +43,12 @@ return [
     'name' => 'Ism',
     'email' => 'Elektron pochta',
     'message' => 'Xabar',
-    'send' => 'Yuborish'
+    'send' => 'Yuborish',
    
+   
+     
+
+
+    
 
 ];

@@ -82,25 +82,23 @@
 
       <!--==================================== Start HEADER =========================================== -->
       <header class="header">
-        <!-- Start PORTFOILIO banner -->
+        <!-- Start SERVICES banner -->
         <div class="services-page__banner page__banner-bg">
-          <div class="container">
-            <div class="services-page">
-              <h1 class="services-page__title">Services</h1>
-              <div class="services-page__links">
-                <a href="index.html" class="services-page__home">Bosh sahifa</a>
-                <span class="services-page__link-sign"
-                  ><i
-                    class="services-page__icon fa-solid fa-chevron-right"
-                    style="color: #ffffff"
-                  ></i
-                ></span>
-                <a href="services.html" class="services-page__link">Services</a>
-              </div>
+            <div class="container">
+                <div class="services-page">
+                    <h1 class="services-page__title">@lang('services.title')</h1>
+                    <div class="services-page__links">
+                        <a href="{{ route('app', app()->getLocale()) }}" class="services-page__home">@lang('services.home')</a>
+                        <span class="services-page__link-sign">
+                            <i class="services-page__icon fa-solid fa-chevron-right" style="color: #ffffff"></i>
+                        </span>
+                        <a href="{{ route('services', app()->getLocale()) }}" class="services-page__link">@lang('services.services')</a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </header>
+    </header>
+    
       <!-- /HEADER -->
 
       <!--=============================================== Start MAIN section ===============================================-->
@@ -110,6 +108,7 @@
           <div class="services services-page__items">
             <div class="services-content">
               <div class="services-content-row">
+                <!-- Service Card 1: CRM Platform -->
                 <div class="services-content__cards main-cards">
                   <div class="services__main-content">
                     <img
@@ -118,15 +117,13 @@
                       class="services__cards-icon"
                     />
                     <h3 class="services__cards-title main-cards__title">
-                      CRM platforma
+                      @lang('main.crm_platform')
                     </h3>
                     <p class="services__cards-desc main-text">
-                      CRM Platforma-bu biznesga mijozlar bilan o’zaro
-                      munosabatlari va munosabatlarni boshqarishda yordam
-                      beruchi dasturiy ilovadir.
+                      @lang('main.crm_platform_description')
                     </p>
                   </div>
-                  <a href class="services__cards-link">
+                  <a href="{{ route('serviceitem') }}" class="services__cards-link">
                     <img
                       src="assets/icons/Arrow-circle.svg"
                       alt="Arrow"
@@ -134,124 +131,117 @@
                     />
                   </a>
                 </div>
-                <!-- *************************** -->
+                <!-- Service Card 2: UI/UX Design -->
                 <div class="services-content__cards main-cards">
                   <div class="services__main-content">
                     <img
                       src="assets/icons/fountain pen.svg"
-                      alt="Crm platform"
+                      alt="UI/UX Design"
                       class="services__cards-icon"
                     />
                     <h3 class="services__cards-title main-cards__title">
-                      UX/UI Dizayn
+                      @lang('main.ui_ux_design')
                     </h3>
                     <p class="services__cards-desc main-text">
-                      UI/UX dizayni har qanday foydalanuvchi interfeysining
-                      dizayni bo’lib, unda qulaylik tashqi ko’rinish kabi
-                      muhimdir.
+                      @lang('main.ui_ux_design_description')
                     </p>
                   </div>
-                  <a href class="services__cards-link">
+                  <a href="{{ route('services') }}" class="services__cards-link">
                     <img
                       src="assets/icons/Arrow-circle.svg"
-                      alt
+                      alt="Arrow"
                       class="arrow__icon"
                     />
                   </a>
                 </div>
-                <!-- ****************************** -->
+                <!-- Service Card 3: Web Development -->
                 <div class="services-content__cards main-cards">
                   <div class="services__main-content">
                     <img
                       src="assets/icons/web.svg"
-                      alt="Crm platform"
+                      alt="Web Development"
                       class="services__cards-icon"
                     />
                     <h3 class="services__cards-title main-cards__title">
-                      Veb-ishlab chiqish
+                      @lang('main.web_development')
                     </h3>
                     <p class="services__cards-desc main-text">
-                      Veb-ishlab chiqish gazeta, dizayn va marketing sohalrini
-                      o’z ichida mujassamlagan gibrid sohalardan biridir.
+                      @lang('main.web_development_description')
                     </p>
                   </div>
-                  <a href class="services__cards-link">
+                  <a href="{{ route('services') }}" class="services__cards-link">
                     <img
                       src="assets/icons/Arrow-circle.svg"
-                      alt
+                      alt="Arrow"
                       class="arrow__icon"
                     />
                   </a>
                 </div>
+                <!-- Service Card 4: Mobile App Development -->
                 <div class="services-content__cards main-cards">
                   <div class="services__main-content">
                     <img
                       src="assets/icons/Mobile.svg"
-                      alt="Crm platform"
+                      alt="Mobile App Development"
                       class="services__cards-icon"
                     />
                     <h3 class="services__cards-title main-cards__title">
-                      Mobil ilovalarni ishlab chiqish
+                      @lang('main.mobile_app_development')
                     </h3>
                     <p class="services__cards-desc main-text">
-                      Smartfon va planshetlar kabi mobil qurilmalarda ishlash
-                      uchun maxsus ishlab chiqilgan dasturiy ilovalarni yaratish
-                      jarayoni.
+                      @lang('main.mobile_app_development_description')
                     </p>
                   </div>
-                  <a href class="services__cards-link">
+                  <a href="{{ route('services') }}" class="services__cards-link">
                     <img
                       src="assets/icons/Arrow-circle.svg"
-                      alt
+                      alt="Arrow"
                       class="arrow__icon"
                     />
                   </a>
                 </div>
-                <!-- *************************** -->
+                <!-- Service Card 5: E-Commerce -->
                 <div class="services-content__cards main-cards">
                   <div class="services__main-content">
                     <img
                       src="assets/icons/WebStore.svg"
-                      alt="Crm platform"
+                      alt="E-Commerce"
                       class="services__cards-icon"
                     />
                     <h3 class="services__cards-title main-cards__title">
-                      Internet do’kon
+                      @lang('main.e_commerce')
                     </h3>
                     <p class="services__cards-desc main-text">
-                      Internet-do’kon — elektron savdo-sotiq shakli, tovarlarni
-                      Internet orqali sotishga mo’ljallangan veb-sayt.
+                      @lang('main.e_commerce_description')
                     </p>
                   </div>
-                  <a href class="services__cards-link">
+                  <a href="{{ route('services') }}" class="services__cards-link">
                     <img
                       src="assets/icons/Arrow-circle.svg"
-                      alt
+                      alt="Arrow"
                       class="arrow__icon"
                     />
                   </a>
                 </div>
-                <!-- ****************************** -->
+                <!-- Service Card 6: Content Writing -->
                 <div class="services-content__cards main-cards">
                   <div class="services__main-content">
                     <img
                       src="assets/icons/Writer.svg"
-                      alt="Crm platform"
+                      alt="Content Writing"
                       class="services__cards-icon"
                     />
                     <h3 class="services__cards-title main-cards__title">
-                      Kontent yozish
+                      @lang('main.content_writing')
                     </h3>
-                    <p class="services__cards-des main-text">
-                      Veb-saytlar, bloglar, ijtimoiy media platformalari va
-                      boshqalar kabi turli xil vositalar uchun yozma materiallar
-                      yaratish jaryoni.
+                    <p class="services__cards-desc main-text">
+                      @lang('main.content_writing_description')
                     </p>
                   </div>
-                  <a href class="services__cards-link">
+                  <a href="{{ route('services') }}" class="services__cards-link">
                     <img
                       src="assets/icons/Arrow-circle.svg"
-                      alt
+                      alt="Arrow"
                       class="arrow__icon"
                     />
                   </a>
@@ -271,31 +261,30 @@
           <!--=========================================== Start CONTACT section ===========================================-->
           <div class="contact">
             <div class="contact__info">
-              <h3 class="contact__title main-title">Savollaringiz bormi?</h3>
+              <h3 class="contact__title main-title">@lang('main.contact_us_title')</h3>
               <p class="contact__desc main-text">
-                Bizga savol yoki murajatlaringiz bo’lsa yo’lashingiz mumkin. Biz
-                sizga iloji boricha tezda javob berishga harakat qilamiz..
+                @lang('main.contact_us_description')
               </p>
               <span class="contact__details main-text">
                 <i
                   class="details__icons fa-solid fa-phone-volume"
                   style="color: #ffffff"
                 ></i>
-                (201) 555-0124</span
+                +998900000000</span
               >
               <span class="contact__details main-text"
                 ><i
                   class="details__icons fa-solid fa-envelope"
                   style="color: #ffffff"
                 ></i
-                >agish.studio@example.com</span
+                >MegaSoft@example.com</span
               >
               <span class="contact__details main-text"
                 ><i
                   class="details__icons fa-solid fa-location-dot"
                   style="color: #ffffff"
                 ></i
-                >3891 Ranchview Dr. Richardson, California 62639</span
+                >Farrux Dusniyazov</span
               >
             </div>
             <div class="contact__form">
@@ -305,7 +294,7 @@
                     <label
                       for="contact__name"
                       class="contact__label input__label"
-                      >Ism</label
+                      >@lang('main.name')</label
                     >
                     <input
                       type="text"
@@ -317,7 +306,7 @@
                     <label
                       for="contact__email"
                       class="contact__label input__label"
-                      >Email</label
+                      >@lang('main.email')</label
                     >
                     <input
                       type="email"
@@ -330,7 +319,7 @@
                   <label
                     for="contact__message"
                     class="contact__label input__label"
-                    >Xabar yozing</label
+                    >@lang('main.message')</label
                   >
                   <textarea
                     rows="6"
@@ -339,7 +328,7 @@
                   ></textarea>
                 </div>
                 <button type="submit" class="contact__btn main-btn">
-                  Yuborish
+                  @lang('main.send')
                 </button>
               </form>
             </div>
@@ -358,6 +347,11 @@
       <!-- /FOOTER -->
     </div>
     <!-- /WRAPPER -->
-    <script src="assets/js/main.js"></script>
+    <script>
+      function changeLang(lang) {
+          let urls = '/locale/' + lang.value;
+          window.location.href = urls;
+      }
+  </script>
   </body>
 </html>

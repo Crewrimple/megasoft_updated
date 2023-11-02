@@ -25,3 +25,4 @@ Route::get('/about', [SiteController::class, 'about'])->name('about');
 Route::get('/portfolio', [SiteController::class, 'portfolio'])->name('portfolio');
 Route::get('/services', [SiteController::class, 'services'])->name('services');
 Route::get('/contact', [SiteController::class, 'contact'])->name('contact');
+Route::get('/serviceitem', [SiteController::class, 'serviceitem'])->name('serviceitem');

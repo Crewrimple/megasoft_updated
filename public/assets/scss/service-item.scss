@@ -1,0 +1,149 @@
+@import "./mixins";
+@import "./variables";
+
+.service-item-page {
+   @include pageBanner();
+}
+
+.service-page {
+   margin-top: 128px;
+
+   @media (max-width: 900px) {
+      margin-top: 60px;
+   }
+
+   .services-wrapper {
+      @include flex(flex-start, space-between);
+
+      .services-menu {
+         position: relative;
+         width: 34%;
+         @include direction(column);
+         // height: 200vh;
+
+         &__items {
+            position: sticky;
+            top: 90px;
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid rgba(169, 174, 177, 0.2);
+            padding: 24px 20px;
+         }
+
+         &__item {
+            @include flex(flex-start, space-between);
+            gap: 20px;
+            padding: 12px 0;
+            cursor: pointer;
+            &:not(:last-child) {
+               border-bottom: 1px solid #a9aeb133;
+               margin-bottom: 8px;
+            }
+         }
+
+         .icon-container {
+            background-color: #232b2e;
+            padding: 20px;
+            border-radius: 8px;
+         }
+      }
+
+      .service-item-icon {
+         width: 40px;
+         height: 40px;
+      }
+
+      .services-info {
+         max-width: 62%;
+
+         &-item {
+            &:first-child {
+               margin-bottom: 75px;
+            }
+         }
+      }
+
+      .service-item-title {
+         color: $whiteColor;
+         font-family: "Outfit";
+         font-size: 20px;
+         font-style: normal;
+         font-weight: 700;
+         line-height: 26px; /* 130% */
+         margin-bottom: 2px;
+      }
+      .service-item-desc {
+         color: $whiteColor;
+         font-family: "Outfit";
+         font-size: 14px;
+         font-style: normal;
+         font-weight: 300;
+         line-height: 20px; /* 142.857% */
+      }
+
+      .service-active {
+         color: #40abe1;
+      }
+
+      .services-info {
+         @include direction(column);
+      }
+      .service-info-img {
+         border-radius: 16px;
+         margin-bottom: 20px;
+         width: 100%;
+      }
+      .services-info-title {
+         color: $whiteColor;
+         font-family: "Outfit";
+         font-size: 30px;
+         font-style: normal;
+         font-weight: 700;
+         line-height: 34px; /* 113.333% */
+         margin-bottom: 20px;
+      }
+      .services-info-text {
+         color: #a1a1a1;
+         font-family: "Outfit";
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 300;
+         line-height: 26px; /* 162.5% */
+      }
+
+      @media (max-width: 870px) {
+         @include flex(unset, unset);
+         flex-direction: column-reverse;
+
+         .services-menu {
+            width: 100%;
+            height: min-content !important;
+            margin-bottom: 30px;
+            &__item {
+               justify-content: flex-start;
+            }
+         }
+
+         .services-info {
+            max-width: 100%;
+         }
+      }
+   }
+}
+
+.service-item-page__after {
+   width: 175px;
+   height: 146.321px;
+   position: absolute;
+   top: 65%;
+   left: 95%;
+   @media (max-width: 1410px) {
+      left: unset;
+      right: 0;
+      top: 80%;
+   }
+
+   @media (max-width: 762px) {
+      display: none;
+   }
+}

@@ -58,11 +58,12 @@
         <!-- SITENAV Btn -->
         <div class="site-nav-btns">
             <div class="site-nav__toggle">
-                <select class="site-nav-btns__toggle" onchange="changeLang(this)">
-                    <option value="uz" @selected(session('locale') == 'uz')>Uz</option>
-                    <option value="en" @selected(session('locale') == 'en')>En</option>
-                    <option value="ru" @selected(session('locale') == 'ru')>Ru</option>
-                </select>
+              <select class="site-nav-btns__toggle" onchange="changeLang(this)">
+                <option value="uz" @selected(session('locale') == 'uz')>Uz</option>
+                <option value="en" @selected(session('locale') == 'en')>En</option>
+                <option value="ru" @selected(session('locale') == 'ru')>Ru</option>
+              </select>
+              
             </div>
             <div class="site-nav-btns__wrapper">
                 <button class="site-nav-btns__btn open__modal-btn">
@@ -81,247 +82,142 @@
       <header class="header">
         <!-- Start ABOUT banner -->
         <div class="about__banner page__banner-bg">
-          <div class="container">
-            <div class="about">
-              <h1 class="about__title">Biz Haqimizda</h1>
-              <div class="about__links">
-                <a href="index.html" class="about__home">Bosh sahifa</a>
-                <span class="about__link-sign"
-                  ><i
-                    class="about__icon fa-solid fa-chevron-right"
-                    style="color: #ffffff"
-                  ></i
-                ></span>
-                <a href="about.html" class="about__link">Biz haqimizda</a>
-              </div>
+            <div class="container">
+                <div class="about">
+                    <h1 class="about__title">@lang('about.about_title')</h1>
+                    <div class="about__links">
+                        <a href="{{ url('/') }}" class="about__home">@lang('about.home')</a>
+                        <span class="about__link-sign">
+                            <i class="about__icon fa-solid fa-chevron-right" style="color: #ffffff"></i>
+                        </span>
+                        <a href="{{ route('about') }}" class="about__link">@lang('about.about_us')</a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </header>
+    </header>
+    
       <!-- /HEADER -->
 
       <!-- Start MAIN -->
       <main class="main">
         <div class="container">
           <div class="delivery">
-            <div class="delivery__img">
-              <img
-                src="images/delivery__img.png"
-                alt="Delivery"
-                class="delivery__img-item"
-              />
-            </div>
-            <div class="delivery__desc">
-              <div class="delivery__text">
-                <h3 class="delivery__title">
-                  Siz uchun ajoyib raqamli mahsulotlarni yetkazib berish
-                </h3>
-                <p class="delivery__parag main-text">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                </p>
+              <div class="delivery__img">
+                  <img src="images/delivery__img.png" alt="Delivery" class="delivery__img-item" />
               </div>
-              <div class="delivery__cards">
-                <!-- ****************************** -->
-                <div class="delivery__cards-item main-cards">
-                  <i
-                    class="fa-regular fa-circle-check delivery__icon"
-                    style="color: #ffffff"
-                  ></i>
-                  <h3 class="delivery__cards-title main-cards__title">
-                    Tezlik ishlashi
-                  </h3>
-                  <p class="delivery__cards-desc main-text">
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout.
-                  </p>
-                </div>
-
-                <div class="delivery__cards-item main-cards">
-                  <i
-                    class="fa-regular fa-circle-check delivery__icon"
-                    style="color: #ffffff"
-                  ></i>
-                  <h3 class="delivery__cards-title main-cards__title">
-                    Maxsus jamoani qo'llab-quvvatlash
-                  </h3>
-                  <p class="delivery__cards-desc main-text">
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout.
-                  </p>
-                </div>
-
-                <!-- *************************** -->
-                <div class="delivery__cards-item main-cards">
-                  <i
-                    class="fa-regular fa-circle-check delivery__icon"
-                    style="color: #ffffff"
-                  ></i>
-                  <h3 class="delivery__cards-title main-cards__title">
-                    Yaxshi hujjatlashtirilgan
-                  </h3>
-                  <p class="delivery__cards-desc main-text">
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout.
-                  </p>
-                </div>
-                <!-- ****************************** -->
+              <div class="delivery__desc">
+                  <div class="delivery__text">
+                      <h3 class="delivery__title">@lang('about.delivery_title')</h3>
+                      <p class="delivery__parag main-text">@lang('about.delivery_description')</p>
+                  </div>
+                  <div class="delivery__cards">
+                      <div class="delivery__cards-item main-cards">
+                          <i class="fa-regular fa-circle-check delivery__icon" style="color: #ffffff"></i>
+                          <h3 class="delivery__cards-title main-cards__title">@lang('about.fast_processing')</h3>
+                          <p class="delivery__cards-desc main-text">@lang('about.fast_processing_description')</p>
+                      </div>
+      
+                      <div class="delivery__cards-item main-cards">
+                          <i class="fa-regular fa-circle-check delivery__icon" style="color: #ffffff"></i>
+                          <h3 class="delivery__cards-title main-cards__title">@lang('about.support_team')</h3>
+                          <p class="delivery__cards-desc main-text">@lang('about.support_team_description')</p>
+                      </div>
+      
+                      <div class="delivery__cards-item main-cards">
+                          <i class="fa-regular fa-circle-check delivery__icon" style="color: #ffffff"></i>
+                          <h3 class="delivery__cards-title main-cards__title">@lang('about.well_documented')</h3>
+                          <p class="delivery__cards-desc main-text">@lang('about.well_documented_description')</p>
+                      </div>
+                  </div>
               </div>
-            </div>
           </div>
-        </div>
+      </div>
+      
 
-        <section id="working__section">
-          <div class="container">
-            <img
-              src="images/working__after.svg"
-              alt="Working"
-              class="working__section-icon working__after-icon"
-            />
+      <section id="working__section">
+        <div class="container">
+            <img src="images/working__after.svg" alt="@lang('about.working_after_icon_alt')" class="working__section-icon working__after-icon" />
             <div class="working">
-              <div class="working__desc">
-                <div class="working__text">
-                  <h3 class="working__title">Biz qanday ishlaymiz</h3>
-                  <p class="working__parag main-text">
-                    It is a long established fact that a reader will be
-                    distracted by the readable content of a page when looking at
-                    its layout.
-                  </p>
+                <div class="working__desc">
+                    <div class="working__text">
+                        <h3 class="working__title">@lang('about.how_we_work_title')</h3>
+                        <p class="working__parag main-text">@lang('about.how_we_work_description')</p>
+                    </div>
+                    <div class="working__cards">
+                        <!-- Research Card -->
+                        <div class="working__cards-item main-cards">
+                            <img src="assets/icons/search 02.svg" alt="@lang('about.research_icon_alt')" class="working__cards-icon" />
+                            <h3 class="working__cards-title main-cards__title">@lang('about.research_title')</h3>
+                            <p class="working__cards-desc main-text">@lang('about.research_description')</p>
+                        </div>
+                        <!-- Concept Card -->
+                        <div class="working__cards-item main-cards">
+                            <img src="assets/icons/idea.svg" alt="@lang('about.concept_icon_alt')" class="working__cards-icon" />
+                            <h3 class="working__cards-title main-cards__title">@lang('about.concept_title')</h3>
+                            <p class="working__cards-desc main-text">@lang('about.concept_description')</p>
+                        </div>
+                        <!-- Design Card -->
+                        <div class="working__cards-item main-cards">
+                            <img src="assets/icons/fountain pen.svg" alt="@lang('about.design_icon_alt')" class="working__cards-icon" />
+                            <h3 class="working__cards-title main-cards__title">@lang('about.design_title')</h3>
+                            <p class="working__cards-desc main-text">@lang('about.design_description')</p>
+                        </div>
+                        <!-- Development Card -->
+                        <div class="working__cards-item main-cards">
+                            <img src="assets/icons/web.svg" alt="@lang('about.development_icon_alt')" class="working__cards-icon" />
+                            <h3 class="working__cards-title main-cards__title">@lang('about.development_title')</h3>
+                            <p class="working__cards-desc main-text">@lang('about.development_description')</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="working__cards">
-                  <!-- ****************************** -->
-                  <div class="working__cards-item main-cards">
-                    <img
-                      src="assets/icons/search 02.svg"
-                      alt="Crm platform"
-                      class="working__cards-icon"
-                    />
-                    <h3 class="working__cards-title main-cards__title">
-                      Tadqiqot
-                    </h3>
-                    <p class="working__cards-desc main-text">
-                      Yangi bilim,tushuncha yoki tushunchaga ega bo’lish uchun
-                      muayyan mavzuni tizimli tekshirish,o’rganish va tahlil
-                      qilish.
-                    </p>
-                  </div>
-                  <!-- ************************************************* -->
-                  <div class="working__cards-item main-cards">
-                    <img
-                      src="assets/icons/idea.svg"
-                      alt="Crm platform"
-                      class="working__cards-icon"
-                    />
-                    <h3 class="working__cards-title main-cards__title">
-                      Tushuncha
-                    </h3>
-                    <p class="working__cards-desc main-text">
-                      Narsa, hodisa yoki hodisalarning toifasi yoki sinfini
-                      ifodalovchi mavhum yoki umumiy fikirdir.
-                    </p>
-                  </div>
-                  <!-- **************************************************** -->
-                  <div class="working__cards-item main-cards">
-                    <img
-                      src="assets/icons/fountain pen.svg"
-                      alt="Crm platform"
-                      class="working__cards-icon"
-                    />
-
-                    <h3 class="working__cards-title main-cards__title">
-                      Dizayn
-                    </h3>
-                    <p class="working__cards-desc main-text">
-                      Dizayn xabarni samarali yetkazadigan vizual jihatdan
-                      jozibali, foydalanuvchilarga qulay va funktsional
-                      saytlarni yaratishdir.
-                    </p>
-                  </div>
-                  <!-- *************************** -->
-                  <div class="working__cards-item main-cards">
-                    <img
-                      src="assets/icons/web.svg"
-                      alt="Crm platform"
-                      class="working__cards-icon"
-                    />
-                    <h3 class="working__cards-title main-cards__title">
-                      Rivojlanish
-                    </h3>
-                    <p class="working__cards-desc main-text">
-                      Rivojlanish yani biror narsani yaratish qurish va uni
-                      yanada takomillashtirishdir.
-                    </p>
-                  </div>
-                  <!-- ****************************** -->
+                <div class="working__gallery">
+                    <div class="working__img">
+                        <img src="images/Working-img.png" alt="Working" class="working__img-item" />
+                    </div>
+                    <div class="working__collection">
+                        <div class="working__collection-wrapper">
+                            <img src="images/working-collection1.png" alt="Working collection" class="working__collection-item" />
+                        </div>
+                        <div class="working__collection-wrapper">
+                            <img src="images/working-collection2.png" alt="Working collection" class="working__collection-item" />
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="working__gallery">
-                <div class="working__img">
-                  <img
-                    src="images/Working-img.png"
-                    alt="Working"
-                    class="working__img-item"
-                  />
-                </div>
-                <div class="working__collection">
-                  <div class="working__collection-wrapper">
-                    <img
-                      src="images/working-collection1.png"
-                      alt="Working collection"
-                      class="working__collection-item"
-                    />
-                  </div>
-                  <div class="working__collection-wrapper">
-                    <img
-                      src="images/working-collection2.png"
-                      alt="Working collection"
-                      class="working__collection-item"
-                    />
-                  </div>
-                </div>
-              </div>
             </div>
-            <img
-              src="images/working__before.svg"
-              alt="Working"
-              class="working__section-icon working__before-icon"
-            />
-          </div>
-        </section>
+            <img src="images/working__before.svg" alt="@lang('about.working_before_icon_alt')" class="working__section-icon working__before-icon" />
+        </div>
+    </section>
 
         <div class="container">
           <!--********************************* Start CONTACT Section ************************************ -->
           <!--=========================================== Start CONTACT section ===========================================-->
           <div class="contact">
             <div class="contact__info">
-              <h3 class="contact__title main-title">Savollaringiz bormi?</h3>
+              <h3 class="contact__title main-title">@lang('main.contact_us_title')</h3>
               <p class="contact__desc main-text">
-                Bizga savol yoki murajatlaringiz bo’lsa yo’lashingiz mumkin. Biz
-                sizga iloji boricha tezda javob berishga harakat qilamiz..
+                @lang('main.contact_us_description')
               </p>
               <span class="contact__details main-text">
                 <i
                   class="details__icons fa-solid fa-phone-volume"
                   style="color: #ffffff"
                 ></i>
-                (201) 555-0124</span
+                +998900000000</span
               >
               <span class="contact__details main-text"
                 ><i
                   class="details__icons fa-solid fa-envelope"
                   style="color: #ffffff"
                 ></i
-                >agish.studio@example.com</span
+                >MegaSoft@example.com</span
               >
               <span class="contact__details main-text"
                 ><i
                   class="details__icons fa-solid fa-location-dot"
                   style="color: #ffffff"
                 ></i
-                >3891 Ranchview Dr. Richardson, California 62639</span
+                >Farrux Dusniyazov</span
               >
             </div>
             <div class="contact__form">
@@ -331,7 +227,7 @@
                     <label
                       for="contact__name"
                       class="contact__label input__label"
-                      >Ism</label
+                      >@lang('main.name')</label
                     >
                     <input
                       type="text"
@@ -343,7 +239,7 @@
                     <label
                       for="contact__email"
                       class="contact__label input__label"
-                      >Email</label
+                      >@lang('main.email')</label
                     >
                     <input
                       type="email"
@@ -356,7 +252,7 @@
                   <label
                     for="contact__message"
                     class="contact__label input__label"
-                    >Xabar yozing</label
+                    >@lang('main.message')</label
                   >
                   <textarea
                     rows="6"
@@ -365,7 +261,7 @@
                   ></textarea>
                 </div>
                 <button type="submit" class="contact__btn main-btn">
-                  Yuborish
+                  @lang('main.send')
                 </button>
               </form>
             </div>
@@ -382,6 +278,15 @@
      @include('layouts.footer')
       <!-- /FOOTER -->
     </div>
-    <script src="assets/js/main.js"></script>
+   
+    
+    <script>
+      function changeLang(lang) {
+          let urls = '/locale/' + lang.value;
+          window.location.href = urls;
+      }
+  </script>
+    </body>
+    
   </body>
 </html>
