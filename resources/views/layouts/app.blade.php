@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/icons.css" />
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!--========================================== Start WRAPPER Section ==========================================-->

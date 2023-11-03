@@ -49,6 +49,8 @@
             </div>
             <div class="site-nav-btns__wrapper">
                 <button class="site-nav-btns__btn open__modal-btn">
+                    <form action="{{ route('form.submit') }}" method="POST">
+                        @csrf
                     @lang('menu.chat')
                 </button>
                 

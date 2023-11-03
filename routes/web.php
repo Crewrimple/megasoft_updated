@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\LocaleController;
+use App\Http\Controllers\FormController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,3 +27,8 @@ Route::get('/portfolio', [SiteController::class, 'portfolio'])->name('portfolio'
 Route::get('/services', [SiteController::class, 'services'])->name('services');
 Route::get('/contact', [SiteController::class, 'contact'])->name('contact');
 Route::get('/serviceitem', [SiteController::class, 'serviceitem'])->name('serviceitem');
+Route::post('/process-form', [FormController::class, 'processForm'])->name('form.submit');
+
+
+
+

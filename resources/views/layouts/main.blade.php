@@ -357,6 +357,8 @@
           ></textarea>
         </div>
         <button type="submit" class="contact__btn main-btn">
+          <form action="{{ route('form.submit') }}" method="POST">
+            @csrf
           @lang('main.send')
         </button>
       </form>
