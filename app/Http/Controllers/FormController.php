@@ -9,16 +9,17 @@ class FormController extends Controller
 {
     public function processForm(Request $request)
     {
-        $data = $request->all();
-
         try {
-            FormSubmission::create($data);
+            FormSubmission::create($request->all());
+
+            return back()->with('success', 'Ваш запрос успешно отправлен!');
         } catch (\Exception $e) {
-            Log::error('Error saving form data: ' . $e->getMessage());
-            // Чтобы видеть ошибку в браузере во время разработки
-            dd($e->getMessage());
+            Log::error('Ошибка при сохранении данных формы: ' . $e->getMessage());
+    
+            
+            return back()->with('error', 'Произошла ошибка. Пожалуйста, попробуйте еще раз.');
         }
-        
-        return back();
     }
+    
+    
 }

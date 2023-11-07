@@ -2,9 +2,19 @@
     <div class="modal__dialog">
       <div class="modal__content">
         <div class="modal__wrapper">
-            <form class="modal__form" action="/process-form" method="post">
+           <form class="modal__form" action="/process-form" method="post">
                 @csrf
+                @if(session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
 
+                    @if(session('error'))
+                        <div class="alert alert-danger">
+                            {{ session('error') }}
+                        </div>
+                    @endif
                 <button class="modal__close">
                     <i class="fa-solid fa-xmark" style="color: #ffffff"></i>
                 </button>
