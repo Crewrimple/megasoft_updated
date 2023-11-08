@@ -9,13 +9,7 @@
                             {{ session('success') }}
                         </div>
                     @endif
-
-                    @if(session('error'))
-                        <div class="alert alert-danger">
-                            {{ session('error') }}
-                        </div>
-                    @endif
-                <button class="modal__close">
+                    <button class="modal__close">
                     <i class="fa-solid fa-xmark" style="color: #ffffff"></i>
                 </button>
                 <div class="modal__info">
