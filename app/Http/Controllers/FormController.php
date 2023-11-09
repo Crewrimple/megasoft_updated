@@ -15,7 +15,6 @@ class FormController extends Controller
             return back()->with('success', 'Ваш запрос успешно отправлен!');
         } catch (\Exception $e) {
             Log::error('Ошибка при сохранении данных формы: ' . $e->getMessage());
-    
             
             return back()->with('error', 'Произошла ошибка. Пожалуйста, попробуйте еще раз.');
         }

@@ -31,9 +31,7 @@
       @include('layouts.main')
 
       <!-- /MAIN -->
-      <div class="notifications">
-        @yield('notifications')
-    </div>
+      
 
       <!--============================================= Start MODAL section =============================================-->
       

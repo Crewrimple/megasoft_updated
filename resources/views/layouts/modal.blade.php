@@ -4,12 +4,7 @@
         <div class="modal__wrapper">
            <form class="modal__form" action="/process-form" method="post">
                 @csrf
-                @if(session('success'))
-                        <div class="alert alert-success">
-                            {{ session('success') }}
-                        </div>
-                    @endif
-                    <button class="modal__close">
+               <button class="modal__close">
                     <i class="fa-solid fa-xmark" style="color: #ffffff"></i>
                 </button>
                 <div class="modal__info">
